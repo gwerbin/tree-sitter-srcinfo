@@ -1,0 +1,266 @@
+{
+  "name": "SRCINFO",
+  "rules": {
+    "source_file": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "pkgbase"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "pkg"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "pkgbase": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "pkgbase_header"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "item"
+          }
+        }
+      ]
+    },
+    "pkg": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "pkg_header"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "item"
+          }
+        }
+      ]
+    },
+    "pkgbase_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "pkgbase"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "pkg_name"
+          }
+        }
+      ]
+    },
+    "pkg_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "pkgname"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "pkg_name"
+          }
+        }
+      ]
+    },
+    "pkg_name": {
+      "type": "PATTERN",
+      "value": "[A-Za-z@._+-]+"
+    },
+    "item": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "\\s+"
+        },
+        {
+          "type": "FIELD",
+          "name": "key",
+          "content": {
+            "type": "SYMBOL",
+            "name": "item_key"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "item_value"
+          }
+        }
+      ]
+    },
+    "item_key": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "pkgver"
+        },
+        {
+          "type": "STRING",
+          "value": "pkgrel"
+        },
+        {
+          "type": "STRING",
+          "value": "epoch"
+        },
+        {
+          "type": "STRING",
+          "value": "pkgdesc"
+        },
+        {
+          "type": "STRING",
+          "value": "arch"
+        },
+        {
+          "type": "STRING",
+          "value": "url"
+        },
+        {
+          "type": "STRING",
+          "value": "license"
+        },
+        {
+          "type": "STRING",
+          "value": "groups"
+        },
+        {
+          "type": "STRING",
+          "value": "depends"
+        },
+        {
+          "type": "STRING",
+          "value": "makedepends"
+        },
+        {
+          "type": "STRING",
+          "value": "checkdepends"
+        },
+        {
+          "type": "STRING",
+          "value": "optdepends"
+        },
+        {
+          "type": "STRING",
+          "value": "provides"
+        },
+        {
+          "type": "STRING",
+          "value": "conflicts"
+        },
+        {
+          "type": "STRING",
+          "value": "replaces"
+        },
+        {
+          "type": "STRING",
+          "value": "backup"
+        },
+        {
+          "type": "STRING",
+          "value": "options"
+        },
+        {
+          "type": "STRING",
+          "value": "install"
+        },
+        {
+          "type": "STRING",
+          "value": "changelog"
+        },
+        {
+          "type": "STRING",
+          "value": "source"
+        },
+        {
+          "type": "STRING",
+          "value": "noextract"
+        },
+        {
+          "type": "STRING",
+          "value": "validpgpkeys"
+        },
+        {
+          "type": "STRING",
+          "value": "md5sums"
+        },
+        {
+          "type": "STRING",
+          "value": "sha1sums"
+        },
+        {
+          "type": "STRING",
+          "value": "sha224sums"
+        },
+        {
+          "type": "STRING",
+          "value": "sha256sums"
+        },
+        {
+          "type": "STRING",
+          "value": "sha384sums"
+        },
+        {
+          "type": "STRING",
+          "value": "sha512sums"
+        }
+      ]
+    },
+    "item_value": {
+      "type": "PATTERN",
+      "value": "[^\\n]+"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+

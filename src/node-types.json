@@ -1,0 +1,254 @@
+[
+  {
+    "type": "item",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "item_key",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "item_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "item_key",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "pkg",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "item",
+          "named": true
+        },
+        {
+          "type": "pkg_header",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pkg_header",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "pkg_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "pkgbase",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "item",
+          "named": true
+        },
+        {
+          "type": "pkgbase_header",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pkgbase_header",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "pkg_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "pkg",
+          "named": true
+        },
+        {
+          "type": "pkgbase",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "arch",
+    "named": false
+  },
+  {
+    "type": "backup",
+    "named": false
+  },
+  {
+    "type": "changelog",
+    "named": false
+  },
+  {
+    "type": "checkdepends",
+    "named": false
+  },
+  {
+    "type": "conflicts",
+    "named": false
+  },
+  {
+    "type": "depends",
+    "named": false
+  },
+  {
+    "type": "epoch",
+    "named": false
+  },
+  {
+    "type": "groups",
+    "named": false
+  },
+  {
+    "type": "install",
+    "named": false
+  },
+  {
+    "type": "item_value",
+    "named": true
+  },
+  {
+    "type": "license",
+    "named": false
+  },
+  {
+    "type": "makedepends",
+    "named": false
+  },
+  {
+    "type": "md5sums",
+    "named": false
+  },
+  {
+    "type": "noextract",
+    "named": false
+  },
+  {
+    "type": "optdepends",
+    "named": false
+  },
+  {
+    "type": "options",
+    "named": false
+  },
+  {
+    "type": "pkg_name",
+    "named": true
+  },
+  {
+    "type": "pkgbase",
+    "named": false
+  },
+  {
+    "type": "pkgdesc",
+    "named": false
+  },
+  {
+    "type": "pkgname",
+    "named": false
+  },
+  {
+    "type": "pkgrel",
+    "named": false
+  },
+  {
+    "type": "pkgver",
+    "named": false
+  },
+  {
+    "type": "provides",
+    "named": false
+  },
+  {
+    "type": "replaces",
+    "named": false
+  },
+  {
+    "type": "sha1sums",
+    "named": false
+  },
+  {
+    "type": "sha224sums",
+    "named": false
+  },
+  {
+    "type": "sha256sums",
+    "named": false
+  },
+  {
+    "type": "sha384sums",
+    "named": false
+  },
+  {
+    "type": "sha512sums",
+    "named": false
+  },
+  {
+    "type": "source",
+    "named": false
+  },
+  {
+    "type": "url",
+    "named": false
+  },
+  {
+    "type": "validpgpkeys",
+    "named": false
+  }
+]
