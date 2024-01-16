@@ -1,0 +1,4 @@
+(pkgbase_header name: _ @pkgbase)
+
+(item key: _ @key (#eq? @key "pkgver") value: _ @value)
+(item key: _ @key (#eq? @key "pkgrel") value: _ @value)
