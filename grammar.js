@@ -48,19 +48,5 @@ module.exports = grammar({
       "sha512sums",
     ),
     item_value: $ => /[^\n]+/,
-
-    // item2: $ => choice(
-    //   $.item_pkgver,
-    //   seq(/[ \t]+/, field("key", "pkgrel"), "=", field("value", /\d+(\.\d+)?/)),
-    // ),
-    //
-    // item_pkgver_key: $ => "pkgver",
-    // item_pkgver_val: $ => /[A-Za-z0-9._-]+/,
-    // item_pkgver: $ => seq(/[ \t]+/, field("key", $.item_pkgver_key), "=", field("value", $.item_pkgver_val)),
-    //
-    // item_pkgrel_key: $ => "pkgrel",
-    // item_pkgrel_val: $ => /\d+(\.\d+)?/,
-    // item_pkgrel: $ => seq(/[ \t]+/, field("key", $.item_pkgrel_key), "=", field("value", $.item_pkgrel_val)),
-
   }
 });
