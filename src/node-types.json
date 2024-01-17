@@ -58,7 +58,7 @@
         "required": true,
         "types": [
           {
-            "type": "pkg_name",
+            "type": "name",
             "named": true
           }
         ]
@@ -93,7 +93,7 @@
         "required": true,
         "types": [
           {
-            "type": "pkg_name",
+            "type": "name",
             "named": true
           }
         ]
@@ -118,6 +118,10 @@
         }
       ]
     }
+  },
+  {
+    "type": "\n",
+    "named": false
   },
   {
     "type": "=",
@@ -176,6 +180,10 @@
     "named": false
   },
   {
+    "type": "name",
+    "named": true
+  },
+  {
     "type": "noextract",
     "named": false
   },
@@ -186,10 +194,6 @@
   {
     "type": "options",
     "named": false
-  },
-  {
-    "type": "pkg_name",
-    "named": true
   },
   {
     "type": "pkgbase",

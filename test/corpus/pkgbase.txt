@@ -1,0 +1,46 @@
+============
+Pkgbase only
+============
+
+pkgbase = foo
+  pkgver = 1.25
+  pkgrel = 2
+
+---
+
+(source_file
+  (pkgbase
+    (pkgbase_header
+      name: (name))
+    (item
+      key: (item_key)
+      value: (item_value))
+    (item
+      key: (item_key)
+      value: (item_value))))
+
+============
+Pkgbase & Pkgname
+============
+
+pkgbase = foo
+  pkgver = 1.25
+  pkgrel = 2
+
+pkgname = foo
+
+---
+
+(source_file
+  (pkgbase
+    (pkgbase_header
+      name: (name))
+    (item
+      key: (item_key)
+      value: (item_value))
+    (item
+      key: (item_key)
+      value: (item_value)))
+  (pkg
+    (pkg_header
+      name: (name))))

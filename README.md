@@ -3,6 +3,8 @@ Based on the format described in the Arch wiki: https://wiki.archlinux.org/title
 ```bash
 tree-sitter generate
 
+tree-sitter test
+
 tree-sitter parse example/srcinfo
 tree-sitter query example/queries example/srcinfo
 ```

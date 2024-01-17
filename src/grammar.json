@@ -70,8 +70,20 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "pkg_name"
+            "name": "name"
           }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "\n"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
@@ -91,12 +103,24 @@
           "name": "name",
           "content": {
             "type": "SYMBOL",
-            "name": "pkg_name"
+            "name": "name"
           }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "\n"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
-    "pkg_name": {
+    "name": {
       "type": "PATTERN",
       "value": "[A-Za-z@._+-]+"
     },
@@ -126,6 +150,18 @@
             "type": "SYMBOL",
             "name": "item_value"
           }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "\n"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

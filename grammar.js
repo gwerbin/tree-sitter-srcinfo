@@ -9,13 +9,13 @@ module.exports = grammar({
     pkgbase: $ => seq($.pkgbase_header, repeat1($.item)),
     pkg: $ => seq($.pkg_header, repeat($.item)),
 
-    pkgbase_header: $ => seq("pkgbase", "=", field("name", $.pkg_name)),
-    pkg_header:     $ => seq("pkgname", "=", field("name", $.pkg_name)),
+    pkgbase_header: $ => seq("pkgbase", "=", field("name", $.name), optional("\n")),
+    pkg_header:     $ => seq("pkgname", "=", field("name", $.name), optional("\n")),
 
     // https://wiki.archlinux.org/title/PKGBUILD#pkgname
-    pkg_name: $ => /[A-Za-z@._+-]+/,
+    name: $ => /[A-Za-z@._+-]+/,
 
-    item: $ => seq(/\s+/, field("key", $.item_key), "=", field("value", $.item_value)),
+    item: $ => seq(/\s+/, field("key", $.item_key), "=", field("value", $.item_value), optional("\n")),
     // https://man.archlinux.org/man/PKGBUILD.5#OPTIONS_AND_DIRECTIVES
     item_key: $ => choice(
       "pkgver",
